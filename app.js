@@ -64,6 +64,7 @@ let waypoint = new Waypoint({
 
 burger.addEventListener("click", ()=> {
     nav.classList.toggle("show")
+    changeImage.classList.toggle("animate")
     listItem.forEach(item => {
         console.log(item)
         item.classList.toggle("up")
@@ -76,7 +77,6 @@ listItem.forEach(item => {
         if (item.classList.contains("home")){
             item.style.color = "white"
             changeImage.src = "./img/lilman.jpg"
-            changeImage.style.animation = "showup"
             item.addEventListener('mouseleave', ()=> {
                 item.style.color = "transparent"
             })
